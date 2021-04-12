@@ -11,9 +11,9 @@ export default function render([w, h]: Coordinate, z: number, callback: (i: numb
     const buff = new Uint32Array(data.data.buffer)
 
     let index = 0
-    for (let i = 0; i < w; i++) {
-        for (let j = 0; j < h; j++) {
-            buff[index++] = callback(i, j)
+    for (let i = 0-w/z/2; i < 0+w/z/2; i += 1/z) {
+        for (let j = 0-h/z/2; j < 0+h/z/2; j += 1/z) {
+            buff[index++] = callback(j, i)
         }
     }
 

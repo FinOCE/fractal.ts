@@ -1,3 +1,3 @@
 import Mandelbrot from './utils/Mandelbrot'
 
-new Mandelbrot(64, 64, 4)
+new Mandelbrot(1028, 1028, 100, 256, false)
