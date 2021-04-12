@@ -25,11 +25,7 @@ export default class Mandelbrot {
                 if (real * imag > 5) break
             }
 
-            //if (0xFF000000 + (nt-n)/nt*16777215 !== 0xFF000000) console.log(n, nt, (n-nt)/n)
-            //return (isNaN(0xFF000000 + (nt-n)/nt*16777215)) ? 0xFFFFFFFF : 0xFF000000
-            //return 0xFF000000
-            return (nt===0) ? 0xFF000000 : 0xFF000000 + (n-nt)/n*16777215
-            //return (nt > 0) ? 0xFFFFFFFF : 0xFF000000
+            return (nt===0) ? 0xFF000000 : 0xFF000000 + (n-nt)/n*255 // 255 = red, 16777215 = all colours
         })
     }
 }

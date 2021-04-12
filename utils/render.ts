@@ -20,7 +20,7 @@ export default function render(s: string, n: number, [w, h]: Coordinate, x:numbe
     ctx.putImageData(data, 0, 0)
 
     const buffer = canvas.toBuffer('image/png')
-    fs.writeFile(`./output/${s} {${n}} [${w}x${h}] (${x},${y}) ${z}x.png`, buffer, () => {
+    fs.writeFile(`./output/${s} {${n}} [${w}x${h}] (${x},${y}i) ${z}x.png`, buffer, () => {
         console.log('File written')
     })
 }
