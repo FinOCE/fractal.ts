@@ -6,21 +6,21 @@ export default class Mandelbrot {
     public iterations: number
     public zoom: number
 
-    constructor(w: number, h: number, n:number, z:number, c:boolean = false) {
+    constructor(w: number, h: number, n:number, x: number, y: number, z:number) {
         this.width = w
         this.height = h
         this.iterations = n
         this.zoom = z
 
-        render([w, h], z, (i, j) => {
+        render('Mandelbrot', n, [w, h], x, y, z, (i, j) => {
             let real = i
             let imag = j
 
             let nt = n
-            while ((c) ? (i**2 + j**2 <= 4 && nt > 0) : (nt > 0)) {
-                let xt = real**2 - imag**2 + i
+            while (nt > 0) {
+                let realt = real**2 - imag**2 + i
                 imag = 2*real*imag + j
-                real = xt
+                real = realt
                 nt--
                 if (real * imag > 5) break
             }
