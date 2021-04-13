@@ -1,3 +1,3 @@
 import Mandelbrot from './utils/Mandelbrot'
 
-new Mandelbrot(1028, 1028, 100, -0.5, 0, 512)
+Mandelbrot(2048, 2048, 1000, [-0.518, -0.5215], 1048576, [255, 0, 0])
